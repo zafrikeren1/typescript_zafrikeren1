@@ -14,3 +14,16 @@
  * Task: Store and display the result in a variable named "isEligible"
 
  */
+
+const minimumGrade = 75;
+const studentGrade = 82;
+const minimumAttendance = 90;
+const studentAttendance = 94;
+const tuitionFeesPaid : boolean = true;
+
+const isEligible: boolean =
+    studentGrade >= minimumGrade &&
+    studentAttendance >= minimumAttendance &&
+    tuitionFeesPaid === true;
+
+console.log("Is eligible for graduation ceremony: ", isEligible)
