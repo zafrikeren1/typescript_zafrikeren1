@@ -9,3 +9,21 @@
  * 
  * display the student data using console.log.
  */
+
+let student1: { id: string; fullName: string; age: number; isActive: boolean } = {
+  id: "S001",
+  fullName: "John Doe",
+  age: 20,
+  isActive: true,
+};
+
+console.log("Student 1:", student1);
+
+let student2: { id: string; fullName: string; age: number; isActive: boolean } = {
+    id: "S002",
+    fullName: "Jane Smith",
+    age: 22,
+    isActive: false,
+};
+
+console.log("Student 2:", student2);
