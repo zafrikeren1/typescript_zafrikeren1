@@ -33,3 +33,47 @@
  * - Calculate the remaining scholarship budget.
  * - Display whether the student is accepted.
  */
+
+const studentName: string = "Alya Putri";
+const gpa: number = 3.89;
+const familyIncome: number = 4200000;
+const competitionCount: number = 4;
+const hasDisciplinaryRecord: boolean = false;
+const documentsComplete: boolean = true;
+
+const minimumGpa: number = 3.75;
+const maximumIncome: number = 5000000;
+const minimumCompetitions: number = 3;
+
+
+const scholarshipAmount_ifQualified: number = 12000000;
+const totalBudget: number = 500000000;
+
+const gpaQualified: boolean = gpa >= minimumGpa;
+const incomeQualified: boolean = familyIncome < maximumIncome;
+const competitionQualified: boolean = competitionCount >= minimumCompetitions;
+const disciplineQualified: boolean = hasDisciplinaryRecord === false;
+const documentsQualified: boolean = documentsComplete === true;
+
+const isQualified: boolean =
+    gpaQualified &&
+    incomeQualified &&
+    competitionQualified &&
+    disciplineQualified &&
+    documentsQualified;
+
+const scholarshipAmount: number = isQualified ? scholarshipAmount_ifQualified : 0;
+
+const remainingBudget: number = totalBudget - scholarshipAmount;
+
+
+console.log("=== Scholarship Evaluation ===");
+console.log("Student Name:", studentName);
+console.log("GPA Qualified:", gpaQualified);
+console.log("Income Qualified:", incomeQualified);
+console.log("Competition Qualified:", competitionQualified);
+console.log("Discipline Qualified:", disciplineQualified);
+console.log("Documents Qualified:", documentsQualified);
+console.log("Is Accepted:", isQualified);
+console.log("Scholarship Amount:", scholarshipAmount);
+console.log("Remaining Budget:", remainingBudget);
