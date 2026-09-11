@@ -23,8 +23,7 @@
  * 
  * Display one of the following messages:
  *  - Scholarship Approved
- *  - Passed First Screening, but Failed Second Screening
- *  - Passed First Screening, but Failed Second Screening
+ *  - Failed First Screening
  * 
  * Student Tasks
  *  - Declare all variables.
@@ -32,3 +31,25 @@
  *  - Implement the second screening only if the first screening is passed.
  *  - Display the correct result.
  */
+
+const minGPA: number = 3.75;
+const maxFamilyIncome: number = 5000000;
+const minCompetitionCount: number = 3;
+const hasDisciplinaryRecord: boolean = false;
+const documentsComplete: boolean = true;
+
+const studentName: string = "Fajar Hidayat";
+const gpa: number = 3.86;
+const familyIncome: number = 4200000;
+const competitionCount: number = 4;
+
+if (gpa >= minGPA && familyIncome < maxFamilyIncome) {
+  if (competitionCount >= minCompetitionCount && !hasDisciplinaryRecord && documentsComplete) {
+    console.log("Scholarship Approved");
+  } else {
+    console.log("Passed First Screening, but Failed Second Screening");
+  }
+} else {
+  console.log("Failed First Screening");
+}
+

@@ -30,3 +30,26 @@
  * 2. Implement both screening stages.
  * 3. Display the loan decision.
  */
+
+const minMonthlyIncome: number = 8000000;
+const minCreditScore: number = 700;
+const maxDebtPercentage: number = 0.3;
+const isPermanentEmployee: boolean = true;
+
+const applicantName: string = "Andi Wijaya";
+const monthlyIncome: number = 10000000;
+const creditScore: number = 725;
+const existingDebt: number = 2500000;
+
+console.log("Applicant Name:", applicantName);
+
+if (monthlyIncome >= minMonthlyIncome && creditScore >= minCreditScore) {
+    const debtPercentage: number = existingDebt / monthlyIncome;
+    if (debtPercentage <= maxDebtPercentage && isPermanentEmployee) {
+        console.log("Loan Approved");
+    } else {
+        console.log("Manual Review");
+    }
+} else {
+    console.log("Loan Rejected");
+}

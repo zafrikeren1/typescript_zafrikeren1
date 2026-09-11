@@ -14,3 +14,17 @@
  * 3. Display the evaluation result. If eligible will display "Bonus Approved", 
  * otherwise display "Bonus not approved"
  */
+
+const minPerformanceScore: number = 80;
+
+const employeeName: string = "Dimas Pratama";
+const performanceScore: number = 78;
+
+console.log("Employee Name:", employeeName);
+console.log("Performance Score:", performanceScore);
+
+if (performanceScore >= minPerformanceScore) {
+  console.log("Bonus Approved");
+} else {
+  console.log("Bonus not approved");
+}

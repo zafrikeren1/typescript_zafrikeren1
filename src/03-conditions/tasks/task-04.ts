@@ -22,3 +22,23 @@
  * 2. Implement the logic using nested if statements.
  * 3. Display the reservation result.
  */
+
+const customerName: string = "Nadia Putri";
+const isPremiumMember: boolean = true;
+const isRoomAvailable: boolean = false;
+
+console.log("Customer Name:", customerName);
+
+if (isRoomAvailable) {
+  if (isPremiumMember) {
+    console.log("Selamat! Anda mendapatkan upgrade kamar gratis!");
+  } else {
+    console.log("Kamar yang anda reservasi telah tersedia.");
+  }
+    } else {
+        if (isPremiumMember) {
+            console.log("Anda adalah member premium. Anda telah dimasukkan ke dalam daftar tunggu prioritas.");
+        } else {
+            console.log("Saat ini tidak ada kamar yang tersedia.");
+        }
+    }
