@@ -8,6 +8,7 @@
  * Checking attendance for Student #30
  * Attendance verification completed.
  * -------------------------------------
+ *
  * 
  * Tasks: 
  * 1. Create a program using a for loop.
@@ -15,3 +16,8 @@
  * 3. After the loop finishes, display: "Attendance verification completed"
 
  */
+
+for (let i = 1; i <= 30; i++) {
+    console.log(`Checking attendance for Student ${i}`);
+}
+console.log("Attendance verification completed.");
